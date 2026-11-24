@@ -1,0 +1,5 @@
+# Helper and data files are used by the scripts, never opened directly.
+<FilesMatch "^(config\.php|dbConfig\.php|GoogleDriveApi\.class\.php)$|\.(txt|json|log)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
