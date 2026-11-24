@@ -1,0 +1,14 @@
+# benakamds.in — site-wide rules (clean deploy 2026-10-17)
+# If your old public_html/.htaccess had other lines (e.g. Hostinger PHP version
+# or HTTPS redirect), paste them BELOW this block.
+
+# Block downloads of database dumps, archives, keys and backup files anywhere on the site
+<FilesMatch "\.(sql|zip|rar|7z|tar|gz|pem|key|env|bak|old|log|ini|sh)$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "^(composer\.(json|lock)|package(-lock)?\.json|bower\.json|Gruntfile\.js|Dockerfile|docker-compose\.yml|credentials\.json|token\.json|\.DS_Store)$">
+    Require all denied
+</FilesMatch>
+
+# No folder listings
+Options -Indexes

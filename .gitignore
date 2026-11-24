@@ -1,0 +1,32 @@
+# --- Secrets: real config files stay only on the server / your PC ---
+public_html/database.php
+public_html/admin/database.php
+public_html/google_drive_upload/config.php
+.env
+*.env
+*.pem
+*.key
+credentials.json
+token.json
+
+# --- Customer data, dumps, backups, archives: never commit ---
+*.sql
+*.sql.gz
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bak
+*.old
+*.log
+benaka_archive/
+public_html/admin/app/json_rem.txt
+public_html/admin/app/*.json
+
+# --- Local / OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

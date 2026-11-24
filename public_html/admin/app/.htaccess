@@ -1,0 +1,5 @@
+# Block direct download of data/backup files in admin/app.
+# PHP scripts (jsonreminder.php, google_drive_upload) still read them from disk.
+<FilesMatch "\.(txt|json|sql|zip|bak|log|pem)$">
+    Require all denied
+</FilesMatch>
